@@ -3,9 +3,9 @@ requires = ["scikit-build-core"]
 build-backend = "scikit_build_core.build"
 
 [project]
-name = "nanobind"
+name = "nanowbind"
 version = "2.1.0"
-description = "nanobind: tiny and efficient C++/Python bindings"
+description = "nanowbind: tiny and efficient C++/Python bindings"
 readme.content-type = "text/markdown"
 readme.text = """
 ![nanobind logo](
@@ -31,7 +31,7 @@ Please see the following links for tutorial and reference documentation in
 [PDF](https://nanobind.readthedocs.io/_/downloads/en/latest/pdf/) formats.
 """
 authors = [
-    { name = "Wenzel Jakob", email = "wenzel.jakob@epfl.ch" },
+    { name = "Benjamin Ulmer", email = "benjaminulmer55@gmail.com" },
 ]
 classifiers = [
     "Intended Audience :: Developers",
@@ -45,7 +45,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/wjakob/nanobind"
+Homepage = "https://github.com/benjaminulmer/nanowbind"
 
 
 [tool.scikit-build]

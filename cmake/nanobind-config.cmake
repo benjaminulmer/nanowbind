@@ -224,15 +224,21 @@ function (nanobind_build_library TARGET_NAME)
     find_dependency(tsl-robin-map)
     target_link_libraries(${TARGET_NAME} PRIVATE tsl::robin_map)
   else()
-    target_include_directories(${TARGET_NAME} PRIVATE
+    target_include_directories(${TARGET_NAME} SYSTEM PRIVATE
       ${NB_DIR}/ext/robin_map/include)
   endif()
 
-  target_include_directories(${TARGET_NAME} PUBLIC
+  target_include_directories(${TARGET_NAME} SYSTEM PUBLIC
     ${Python_INCLUDE_DIRS}
     ${NB_DIR}/include)
 
   target_compile_features(${TARGET_NAME} PUBLIC cxx_std_17)
+
+  if (MSVC)
+    target_compile_options(${TARGET_NAME} PUBLIC /wd4365) # disable signed/unsigned mismatch warning
+  else()
+    target_compile_options(${TARGET_NAME} PUBLIC -w)
+  endif()
   nanobind_set_visibility(${TARGET_NAME})
 endfunction()
 

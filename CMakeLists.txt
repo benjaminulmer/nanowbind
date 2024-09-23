@@ -63,7 +63,7 @@ if(NB_CREATE_INSTALL_RULES AND NOT CMAKE_SKIP_INSTALL_RULES)
   # Silence warning in GNUInstallDirs due to no enabled languages
   set(CMAKE_INSTALL_LIBDIR "")
   include(GNUInstallDirs)
-  set(NB_INSTALL_DATADIR "nanobind"
+  set(NB_INSTALL_DATADIR "nanowbind"
     CACHE PATH "Installation path for read-only architecture-independent nanobind data files")
 
   # Normally these would be configurable by the user, but we can't allow that
