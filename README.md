@@ -1,3 +1,7 @@
+# nanowbind: nanobind with no warnings
+
+Below is the nanobind README verbatim
+
 # nanobind: tiny and efficient C++/Python bindings
 
 [![Documentation](https://img.shields.io/readthedocs/nanobind/latest)](https://nanobind.readthedocs.io/en/latest/)
